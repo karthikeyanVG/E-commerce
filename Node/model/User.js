@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const validate = require('mongoose-validator')
-const userSchema = mongoose.Schema({
-    username: {
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+    name: {
         type: String,
         required: true
     },
@@ -12,15 +14,6 @@ const userSchema = mongoose.Schema({
     phone: {
         type: String,
         required: true,
-        unique: true,
-        index: true,
-        sparse: true,
-        validate: [
-            validate({
-                validator: 'isNumeric',
-                arguments: [8, 14],
-                message: 'Not a valid phone number.',
-            })],
     },
     password: {
         type: String,
@@ -32,4 +25,4 @@ const userSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = User = mongoose.model('customer', userSchema);

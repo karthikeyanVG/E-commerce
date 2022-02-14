@@ -1,0 +1,76 @@
+.primary {
+    background-image: linear-gradient(to right, #485563 0%, #29323c 51%, #485563 100%)
+}
+
+.primary {
+    margin: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border: none;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.primary:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ******************* */
+.tertiary {
+    background-image: linear-gradient(to right, #E0EAFC 0%, #CFDEF3 51%, #E0EAFC 100%)
+}
+
+.tertiary {
+    margin: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    border: none;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.tertiary:hover {
+    background-position: right center;
+    color: gray;
+    text-decoration: none;
+}
+
+/* ******************* */
+.secondary {
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)
+}
+
+.secondary {
+    margin: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-weight: bold;
+    border: none;
+    background-size: 200% auto;
+    color: black;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.secondary:hover {
+    background-position: right center;
+    color: rgb(143, 143, 143);
+    text-decoration: none;
+}
