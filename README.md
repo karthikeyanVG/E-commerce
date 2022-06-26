@@ -1,2 +1,2 @@
-# E-commers
-E-Commers Project
+# E-commerce
+E-commerce Project
