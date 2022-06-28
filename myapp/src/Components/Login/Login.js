@@ -53,9 +53,7 @@ const Login = () => {
                             name="psw"
                             value={password}
                             onChange={onPasswordChange}
-
                         />
-
                     </div>
                 </ModalBody>
                 <ModalFooter className='button' >

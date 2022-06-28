@@ -10,6 +10,7 @@ const SignUpForm = () => {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [type, setType] = useState('');
 
     const onNameChange = (e) => {
         // console.log(e.target.value);
@@ -31,14 +32,19 @@ const SignUpForm = () => {
         // console.log(e.target.value);
         setConfirmPassword(e.target.value)
     }
-    const onSubmitValues = async () => {
+    const onTypeClick = (e) => {
+        console.log(e.target.value);
+        setType(e.target.value)
+    }
+    const onSubmitValues = async () => {// connect to back end process
         if (password === confirmPassword) {
             const UserData = {
                 name: name,
                 email: email,
                 phone: phone,
                 password: password,
-                confirmPassword: confirmPassword
+                confirmPassword: confirmPassword,
+
             }
             let result;
             try {
@@ -71,7 +77,6 @@ const SignUpForm = () => {
                             name="name"
                             value={name}
                             onChange={onNameChange}
-
                         />
                         <label >Email</label>
                         <Input
@@ -80,7 +85,6 @@ const SignUpForm = () => {
                             name="email"
                             value={email}
                             onChange={onEmailChange}
-
                         />
                         <label >Phone Number</label>
                         <Input
@@ -89,7 +93,6 @@ const SignUpForm = () => {
                             name="phone"
                             value={phone}
                             onChange={onPhoneChange}
-
                         />
                         <label >Password</label>
                         <Input
@@ -98,7 +101,6 @@ const SignUpForm = () => {
                             name="psw"
                             value={password}
                             onChange={onPasswordChange}
-
                         />
                         <label >Confirm Password</label>
                         <Input
@@ -107,8 +109,30 @@ const SignUpForm = () => {
                             name="psw-repeat"
                             value={confirmPassword}
                             onChange={onConfirmChange}
-
                         />
+                        <label >Login Type</label>
+                        <div>
+                            <Input
+                                type="radio"
+                                placeholder="Confirm Password"
+                                name="psw-repeat"
+                                value="admin"
+                                checked={type === 'admin'}
+                                onChange={onTypeClick}
+                            />
+                            <label >Admin</label>
+                            <div>
+                                <Input
+                                    type="radio"
+                                    placeholder="Confirm Password"
+                                    name="psw-repeat"
+                                    value="student"
+                                    checked={type === 'student'}
+                                    onChange={onTypeClick}
+                                />
+                                <label >Student</label>
+                            </div>
+                        </div>
                     </div>
                 </ModalBody>
                 <ModalFooter className='button' >
